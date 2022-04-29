@@ -169,3 +169,30 @@ class Heap(Generic[Ord]):
     def max_heap(x: list[Ord]) -> Heap[Ord]:
         """Create a max-heap."""
         return Heap(x, select_max)
+
+
+def min_heap_sort(x: list[Ord]) -> list[Ord]:
+    """
+    Sort x and return the sorted values.
+
+    >>> min_heap_sort([1, 4, 2, 3, 5])
+    [1, 2, 3, 4, 5]
+    """
+    heap = Heap.min_heap(x)
+    y = []
+    while heap:
+        y.append(heap.pop())
+    return y
+
+
+def max_heap_sort(x: list[Ord]) -> list[Ord]:
+    """
+    Sort x and return the sorted values.
+
+    >>> max_heap_sort([1, 4, 2, 3, 5])
+    [1, 2, 3, 4, 5]
+    """
+    heap = Heap.max_heap(x)
+    while heap:
+        heap.pop()
+    return x
