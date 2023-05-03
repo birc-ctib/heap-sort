@@ -2,7 +2,7 @@
 
 You can implement a heap sort using a binary heap where you do not use any extra memory—you can do all the operations in the input list. We are going to do this now, in a few easy steps.
 
-In `src/heap.py` I have put a generic heap--all the operations are there for both a max and min heap--but currently only with support for a min heap.
+In `src/heap.py` there is a generic heap--all the operations are there for both a max and min heap--but currently only with support for a min heap.
 
 You can use it to implement a sorting algorithm like this:
 
